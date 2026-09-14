@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Complete HTML Typographic Elements</title>
   <link rel="stylesheet" href="dist/output.css">
 </head>
-<body>
+
+<body class="prose prose-h2:text-indigo-500 prose-p:line-clamp-6 mx-auto bg-lime-200">
 
   <!-- Article Header & Meta Data -->
   <header>
-    <p><small>Published on <time datetime="2026-09-14">September 14, 2026</time> by <address style="display:inline;">Md Badrul Alam</address></small></p>
-    <h1>Main Article Title (H1)</h1>
+    <p><small>Published on <time datetime="2026-09-14">September 14, 2026</time> by <address style="display:inline;">Md
+          Badrul Alam</address></small></p>
+    <h1 class="text-gray-400">Main Article Title (H1)</h1>
     <p><em>A complete structural breakdown of standard HTML typography without custom styling.</em></p>
   </header>
 
   <hr>
 
   <!-- Section 1: Headings Hierarchy -->
-  <section class="bg-indigo-500">
+  <section>
     <h2>Heading Level 2 (H2)</h2>
     <h3>Heading Level 3 (H3)</h3>
     <h4>Heading Level 4 (H4)</h4>
@@ -32,16 +35,35 @@
   <section>
     <h2>Long-Form Paragraphs & Inline Formatting</h2>
 
+    <p class="line-clamp-3">
+      In web development, structural HTML semantics provide the foundation for accessibility and readability across
+      diverse browsers and assistive technologies. When browsers parse raw HTML without external CSS stylesheets, they
+      apply standard user-agent styles that govern default font sizing, margins, line wrapping, and element display
+      behavior. Relying on correct native markup tags ensures that content remains structured logically even when
+      stylesheets fail to load, or when content is processed by screen readers, RSS feeds, search engine crawlers, and
+      web scrapers.
+    </p>
+
+    <h2>second para</h2>
     <p>
-      In web development, structural HTML semantics provide the foundation for accessibility and readability across diverse browsers and assistive technologies. When browsers parse raw HTML without external CSS stylesheets, they apply standard user-agent styles that govern default font sizing, margins, line wrapping, and element display behavior. Relying on correct native markup tags ensures that content remains structured logically even when stylesheets fail to load, or when content is processed by screen readers, RSS feeds, search engine crawlers, and web scrapers.
+      Within standard long-form body text, inline formatting elements allow developers to express structural nuances
+      without altering layout semantics. You can emphasize terms using <em>emphasized text (em)</em> or <i>italicized
+        text (i)</i>, highlight critical importance with <strong>strong importance (strong)</strong> or <b>bold text
+        (b)</b>, and indicate <mark>highlighted background text (mark)</mark>. Editorial revisions are denoted using
+      <del>deleted or struck-through text (del)</del> alongside <ins>inserted text (ins)</ins> or <s>no longer accurate
+        content (s)</s>. Fine print, copyright details, and side notes use the <small>small text element
+        (small)</small>.
     </p>
 
     <p>
-      Within standard long-form body text, inline formatting elements allow developers to express structural nuances without altering layout semantics. You can emphasize terms using <em>emphasized text (em)</em> or <i>italicized text (i)</i>, highlight critical importance with <strong>strong importance (strong)</strong> or <b>bold text (b)</b>, and indicate <mark>highlighted background text (mark)</mark>. Editorial revisions are denoted using <del>deleted or struck-through text (del)</del> alongside <ins>inserted text (ins)</ins> or <s>no longer accurate content (s)</s>. Fine print, copyright details, and side notes use the <small>small text element (small)</small>.
-    </p>
-
-    <p>
-      Technical documents frequently incorporate inline references such as <code style="font-family: monospace;">inline code snippets (code)</code>, keyboard shortcuts like <kbd>Ctrl</kbd> + <kbd>C</kbd> <kbd>(kbd)</kbd>, variable outputs like <var>x</var> + <var>y</var> <kbd>(var)</kbd>, or computer output samples like <samp>Error 404 Not Found (samp)</samp>. Mathematical formulas rely on scientific notation like H<sub>2</sub>O <kbd>(sub)</kbd> or exponential calculations like 10<sup>2</sup> <kbd>(sup)</kbd>. Other specialized inline tags include <abbr title="HyperText Markup Language">HTML</abbr> <kbd>(abbr)</kbd> for tooltips, <dfn>semantic definitions (dfn)</dfn>, <q>short inline quotes (q)</q>, and <ruby>漢字 <rt>かんじ</rt></ruby> <kbd>(ruby)</kbd> annotations.
+      Technical documents frequently incorporate inline references such as <code
+        style="font-family: monospace;">inline code snippets (code)</code>, keyboard shortcuts like <kbd>Ctrl</kbd> +
+      <kbd>C</kbd> <kbd>(kbd)</kbd>, variable outputs like <var>x</var> + <var>y</var> <kbd>(var)</kbd>, or computer
+      output samples like <samp>Error 404 Not Found (samp)</samp>. Mathematical formulas rely on scientific notation
+      like H<sub>2</sub>O <kbd>(sub)</kbd> or exponential calculations like 10<sup>2</sup> <kbd>(sup)</kbd>. Other
+      specialized inline tags include <abbr title="HyperText Markup Language">HTML</abbr> <kbd>(abbr)</kbd> for
+      tooltips, <dfn>semantic definitions (dfn)</dfn>, <q>short inline quotes (q)</q>, and <ruby>漢字 <rt>かんじ</rt></ruby>
+      <kbd>(ruby)</kbd> annotations.
     </p>
   </section>
 
@@ -53,7 +75,8 @@
 
     <figure>
       <blockquote>
-        <p>"Semantic HTML is not merely about visual presentation; it is the fundamental contract between content creators, browser engines, and assistive devices."</p>
+        <p>"Semantic HTML is not merely about visual presentation; it is the fundamental contract between content
+          creators, browser engines, and assistive devices."</p>
       </blockquote>
       <figcaption>— <cite>Web Standards Specification, Chapter 4</cite></figcaption>
     </figure>
@@ -99,9 +122,10 @@
     <dl>
       <dt><strong>HTML</strong></dt>
       <dd>HyperText Markup Language — the standard structure for web pages.</dd>
-      
+
       <dt><strong>DOM</strong></dt>
-      <dd>Document Object Model — the data representation of the objects that comprise the structure and content of a document on the web.</dd>
+      <dd>Document Object Model — the data representation of the objects that comprise the structure and content of a
+        document on the web.</dd>
     </dl>
   </section>
 
@@ -148,4 +172,5 @@
   </footer>
 
 </body>
+
 </html>
