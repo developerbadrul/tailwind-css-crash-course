@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Overlay</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="relative w-225 h-150 overflow-hidden rounded-lg">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900&q=80" alt="Nature landscape"
+            class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white/40 text-center px-8">
+            <h1 class="text-6xl font-bold tracking-wide drop-shadow-lg">Overlay Text</h1>
+            <p class="mt-4 text-xl font-medium tracking-wider text-white/90 drop-shadow">
+                A subtitle that sits gracefully over the image
+            </p>
+        </div>
+    </div>
+
+    <div class="text-center space-y-6">
+        <!-- The Image-In-Text Heading -->
+        <h1 class="text-10xl sm:text-9xl font-black uppercase tracking-tight 
+               bg-[url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80')] 
+               bg-cover bg-center bg-clip-text text-transparent drop-shadow-2xl">
+            NATURE
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-400 font-medium max-w-md mx-auto">
+            The image is clipped directly inside the letter shapes using <code
+                class="text-amber-400 bg-slate-900 px-2 py-0.5 rounded text-sm font-mono">bg-clip-text</code>.
+        </p>
+    </div>
+</body>
+
+</html>
