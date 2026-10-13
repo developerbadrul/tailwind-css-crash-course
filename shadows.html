@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body>
+    <main>
+        <div
+            class="max-w-4xl mx-auto p-12 bg-slate-50 min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10 font-sans text-slate-800">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <h3 class="font-bold text-lg mb-2">Basic Card</h3>
+                <p class="text-slate-500">This card sits very close to the background.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                <h3 class="font-bold text-lg mb-2">Hover Me!</h3>
+                <p class="text-slate-500">This card lifts up when you hover over it.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-2xl relative z-10">
+                <h3 class="font-bold text-xl mb-2 text-slate-900">Popup Modal</h3>
+                <p class="text-slate-500">This looks like it is floating high above the page.</p>
+            </div>
+
+            <div class="flex items-center">
+                <input type="text" placeholder="Search..."
+                    class="w-full bg-slate-100 p-4 rounded-lg shadow-inner outline-none focus:ring-2 focus:ring-teal-500 text-slate-700">
+            </div>
+
+            <div class="flex items-center justify-center">
+                <button
+                    class="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-indigo-500/50 transition-all hover:-translate-y-1">Confirm
+                    Payment</button>
+            </div>
+
+            <div class="flex items-center justify-center gap-8">
+                <svg class="w-16 h-16 text-amber-400 shadow-lg bg-white/0" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                </svg>
+
+                <svg class="w-16 h-16 text-amber-400 drop-shadow-xl" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                </svg>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
