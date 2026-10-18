@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themes</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen p-8 antialiased flex justify-center items-center transition-colors duration-300">
+    <!-- Container -->
+    <div class="w-full max-w-md space-y-6">
+        <!-- Theme Toggle Button -->
+        <div class="flex justify-end">
+            <button id="theme-toggle"
+                class="px-4 py-2 text-sm font-bold rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 transition duration-300">🌙
+                Toggle Theme</button>
+        </div>
+
+        <!-- Main Card -->
+        <div
+            class="bg-white border border-slate-200 shadow-xl rounded-2xl p-8 space-y-6 dark:bg-slate-900 dark:border-slate-800 dark:shadow-black/50 transition-colors">
+            <h2 class="text-2xl font-extrabold tracking-tight">Welcome to the App</h2>
+            <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm leading-relaxed">This text should be dark gray in
+                light mode, and light gray in dark mode.</p>
+
+            <!-- Input Field -->
+            <input type="email"
+                class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-slate-950 dark:border-slate-800 dark:text-white dark:placeholder-slate-500 dark:focus:ring-teal-400 transition-colors"
+                placeholder="Enter your email">
+
+            <!-- Primary Action Button -->
+            <button
+                class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-xl shadow-md dark:bg-teal-500 dark:hover:bg-teal-400 dark:text-slate-950 transition-colors">Subscribe</button>
+        </div>
+
+        <!-- Subtle Footer -->
+        <p class="text-center text-xs font-medium text-slate-400 dark:text-slate-600"">System status: All systems
+            operational.</p>
+    </div>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        toggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+
+            if (htmlElement.classList.contains('dark')) {
+                toggleBtn.textContent = '☀️ Light Mode';
+            } else {
+                toggleBtn.textContent = '🌙 Dark Mode';
+            }
+        })
+    </script>
+</body>
+
+</html>
