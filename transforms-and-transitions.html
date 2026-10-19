@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms and Transitions</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <style>
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="max-w-4xl mx-auto p-10 bg-slate-100 min-h-screen space-y-12 font-sans text-slate-800">
+
+        <!-- 1. Lift on Hover Card -->
+        <div
+            class="bg-white p-6 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-transform duration-300 cursor-pointer text-sm">
+            <h3 class="font-bold text-lg mb-1">Hover to Lift</h3>
+            <p class="text-slate-500 text-sm">This card floats up smoothly when hovered.</p>
+        </div>
+
+        <!-- 2. Scale Button -->
+        <div>
+            <button class="bg-indigo-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg
+                       hover:scale-105 active:scale-95
+                       transition-transform duration-200 ease-out">
+                Click / Hover Me
+            </button>
+        </div>
+
+        <!-- 3. Rotate Icon Button -->
+        <div>
+            <button
+                class="group flex items-center gap-2 bg-white border border-slate-200 px-5 py-2.5 rounded-lg shadow-sm hover:bg-slate-50 transition-colors">
+                <span class="font-medium text-sm">Settings</span>
+                <span class="text-slate-400 group-hover:rotate-180 transition-transform duration-300">▼</span>
+            </button>
+        </div>
+
+        <!-- 4. Slide & Fade Notification -->
+        <div
+            class="max-w-sm bg-emerald-500 text-white px-5 py-4 rounded-xl shadow-lg flex items-center gap-3 animate-[slideIn_0.8s_ease-out]">
+            <span class="text-xl">✓</span>
+            <p class="font-medium text-sm">Success! Your changes have been saved.</p>
+        </div>
+
+        <!-- 5. Spinning Loader -->
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 border-4 border-slate-200 border-t-indigo-600 rounded-full animate-spin"></div>
+            <span class="text-sm text-slate-500 font-medium">Loading...</span>
+        </div>
+
+        <!-- 6. Skew / Tilt Card (fun effect) -->
+        <div
+            class="bg-linear-to-br from-fuchsia-500 to-indigo-600 text-white p-8 rounded-2xl shadow-xl mx-w-xs hover:skew-y-2 hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <h3 class="font-bold text-xl">Hover to Tilt</h3>
+            <p class="text-white/80 text-sm mt-1">Uses skew + scale together.</p>
+        </div>
+
+        <!-- 7. Zoom Image on Hover (overflow hidden) -->
+        <div class="w-72 h-48 rounded-2xl overflow-hidden shadow-lg cursor-pointer group">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80"
+                class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500 ease-out"
+                alt="Abstract">
+        </div>
+
+        <!-- 8 button click exttra effect  -->
+        <button
+            class="relative bg-slate-900 text-white font-bold px-6 py-3 rounded-full overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/30 active:translate-y-0 active:shadow-md transition-all duration-200 ease-out">
+            <span class="relative z-10">Premium Action</span>
+        </button>
+
+    </div>
+
+</body>
+
+</html>
