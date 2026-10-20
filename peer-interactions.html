@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer interactions</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="max-w-lg mx-auto p-10 bg-slate-50 min-h-screen space-y-10 font-sans text-slate-800">
+
+        <!-- 1. Custom Checkbox -->
+        <label class="flex items-center gap-3 cursor-pointer group">
+            <input type="checkbox" class="peer sr-only">
+            <span class="w-6 h-6 rounded-md border-2 border-slate-300 bg-white 
+                    peer-checked:bg-teal-500 peer-checked:border-teal-500
+                     peer-focus-visible:ring-4 peer-focus-visible:ring-teal-500/30 peer-checked:[&>svg]:opacity-100
+                     flex items-center justify-center transition-all">
+
+                <svg class="w-4 h-4 opacity-0 text-white transition-opacity duration-200" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </span>
+            <span class="font-medium peer-checked:text-teal-700 transition-colors">I agree to the terms</span>
+        </label>
+
+        <!-- 2. Toggle Switch -->
+        <label class="flex items-center gap-3 cursor-pointer">
+            <input type="checkbox" id="theme-checkbox" class="peer sr-only">
+            <div
+                class="w-14 h-8 rounded-full bg-slate-300 peer-checked:bg-teal-500 peer-checked:[&>div]:translate-x-6 transition-colors relative">
+                <div
+                    class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300">
+                </div>
+            </div>
+            <span class="text-sm font-medium">Dark Mode</span>
+        </label>
+
+        <!-- 3. Password Focus Reveal -->
+        <div class="space-y-2 max-w-sm">
+            <input type="password"
+                class="peer w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
+                placeholder="Enter password">
+            <p class="text-sm text-slate-500 opacity-0 -translate-y-1 
+                  peer-focus:opacity-100 peer-focus:translate-y-0 
+                  transition-all duration-300">
+                Must be at least 8 characters
+            </p>
+        </div>
+
+        <!-- 4. Floating Label Input -->
+        <div class="relative max-w-sm">
+            <input type="text" id="email" placeholder="Enter your email"
+                class="peer w-full px-4 py-3 rounded-xl border border-slate-300 bg-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+            <label for="email"
+                class="absolute left-4 top-3 text-slate-400 text-sm transition-all pointer-events-none peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-teal-600 peer-focus:bg-white peer-focus:px-1">
+                Email address
+            </label>
+        </div>
+
+        <!-- 5. Form Validation Feedback -->
+        <div class="space-y-2 max-w-sm">
+            <input type="email" class="peer w-full px-4 py-3 rounded-xl border border-slate-300 bg-white
+                  valid:border-emerald-500 valid:ring-emerald-500/30
+                  invalid:border-rose-400
+                  focus:outline-none focus:ring-2 transition" required placeholder="you@example.com">
+            <p class="hidden text-sm text-emerald-600 font-medium
+              peer-[&:not(:placeholder-shown):valid]:block">
+                ✓ Looks good!
+            </p>
+            <p class="hidden text-sm text-rose-500 font-medium
+                  peer-invalid:peer-not-placeholder-shown:block">
+                ✕ Please enter a valid email
+            </p>
+        </div>
+
+        <!-- 6. Disabled Peer State -->
+        <label class="flex items-center gap-3 cursor-not-allowed">
+            <input type="checkbox" class="peer sr-only" disabled>
+            <span class="w-6 h-6 rounded-md border-2 border-slate-200 bg-slate-100
+                     peer-disabled:opacity-50"></span>
+            <span class="text-slate-400 peer-disabled:opacity-60 font-medium">
+                This option is locked
+            </span>
+        </label>
+
+        <!-- 7. Peer Hover / Peer Active (card selector) -->
+        <div class="grid grid-cols-2 gap-4">
+            <label class="cursor-pointer">
+                <input type="radio" name="plan" value="pro" class="peer sr-only">
+                <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white
+                        peer-checked:border-teal-500 peer-checked:bg-teal-50
+                        peer-checked:shadow-lg peer-checked:shadow-teal-500/20
+                        peer-focus-visible:ring-4 peer-focus-visible:ring-teal-500/30
+                        hover:border-slate-300 transition-all">
+                    <h3 class="font-bold text-lg peer-checked:text-teal-800">Pro Plan</h3>
+                    <p class="text-slate-500 text-sm mt-1">$12 / month</p>
+                </div>
+            </label>
+
+            <label class="cursor-pointer">
+                <input type="radio" name="plan" value="team" class="peer sr-only">
+                <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white
+                        peer-checked:border-indigo-500 peer-checked:bg-indigo-50
+                        peer-checked:shadow-lg peer-checked:shadow-indigo-500/20
+                        hover:border-slate-300 transition-all">
+                    <h3 class="font-bold text-lg">Team Plan</h3>
+                    <p class="text-slate-500 text-sm mt-1">$29 / month</p>
+                </div>
+            </label>
+        </div>
+
+    </div>
+</body>
+
+</html>
