@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tailwind</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="max-w-4xl mx-auto p-8 bg-slate-100 min-h-screen space-y-12 font-sans text-slate-800">
+
+        <!-- 1. Basic Navbar -->
+        <nav class="flex items-center justify-between bg-white px-6 py-4 rounded-2xl shadow-sm border border-slate-200">
+            <div class="font-black text-xl tracking-tight text-teal-600">LOGO</div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#" class="hover:text-teal-600 transition">Home</a>
+                <a href="#" class="hover:text-teal-600 transition">Features</a>
+                <a href="#" class="hover:text-teal-600 transition">Pricing</a>
+            </div>
+
+            <button
+                class="bg-slate-900 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-slate-800 transition">
+                Sign In
+            </button>
+        </nav>
+
+        <!-- 2. Centered Hero Content -->
+        <section
+            class="flex flex-col items-center justify-center text-center min-h-64 bg-white rounded-3xl shadow-sm border border-slate-200 p-10">
+            <h1 class="text-4xl font-extrabold tracking-tight mb-3">Build faster with Flex</h1>
+            <p class="text-slate-500 mb-6 max-w-md">Short subtitle that stays nicely centered above the button.</p>
+            <button class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-8 py-3 rounded-full transition">
+                Get Started
+            </button>
+        </section>
+
+        <!-- 3. Media Object (Avatar + Text) -->
+        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-200 max-w-sm">
+            <img src="https://i.pravatar.cc/80?img=3" alt="User">
+            <div>
+                <h3 class="font-bold text-lg leading-tight">Sarah Jenkins</h3>
+                <p class="text-slate-500 text-sm">Product Designer · San Francisco</p>
+            </div>
+        </div>
+
+        <!-- 4. Space Between Card Header -->
+        <div class="flex items-center justify-between bg-white px-6 py-4 rounded-2xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-lg">Project Alpha</h3>
+            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">
+                In Progress
+            </span>
+        </div>
+
+        <!-- 5. Equal Width Columns -->
+        <div class="flex flex-wrap gap-4">
+            <div
+                class="flex-1 min-w-50 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center font-bold">
+                Card 1</div>
+            <div
+                class="flex-1 min-w-50 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center font-bold">
+                Card 2</div>
+            <div
+                class="flex-1 min-w-50 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center font-bold">
+                Card 3</div>
+        </div>
+
+        <!-- 6. Form Row (Label + Input + Button) -->
+        <form class="flex flex-col sm:flex-row gap-3 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+            <input type="email" name="email" autocomplete="email"
+                class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                placeholder="Email address">
+            <button
+                class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition-colors whitespace-nowrap">
+                Subscribe
+            </button>
+        </form>
+
+        <!-- 7. Push Item to the End (mt-auto / ml-auto pattern) -->
+        <div class="flex flex-col h-64 bg-white p-6 rounded-2xl shadow-sm border border-slate-200 max-w-xs">
+            <h3 class="font-bold text-lg mb-2">Flex Grow Card</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">
+                Some short description text that doesn’t fill the card.
+            </p>
+            <button
+                class="mt-auto w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-colors">
+                Learn More
+            </button>
+        </div>
+
+        <!-- 8. Inline Stats / Button Group -->
+        <div class="flex items-center justify-center gap-6 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <div class="text-center">
+                <div class="text-2xl font-black text-teal-600">24K</div>
+                <div class="text-xs text-slate-500 font-medium uppercase tracking-wide">Users</div>
+            </div>
+            <div class="w-px h-10 bg-slate-200 hidden sm:block"></div>
+            <div class="text-center">
+                <div class="text-2xl font-black text-teal-600">1.2K</div>
+                <div class="text-xs text-slate-500 font-medium uppercase tracking-wide">Posts</div>
+            </div>
+            <div class="w-px h-10 bg-slate-200 hidden sm:block"></div>
+            <div class="text-center">
+                <div class="text-2xl font-black text-teal-600">98%</div>
+                <div class="text-xs text-slate-500 font-medium uppercase tracking-wide">Uptime</div>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+            <button
+                class="flex items-center gap-2 bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-indigo-500 transition">
+                <span>★</span>
+                <span>Favorite</span>
+            </button>
+
+            <button
+                class="flex flex-row-reverse items-center gap-2 bg-white border border-slate-200 font-bold px-5 py-2.5 rounded-xl hover:bg-slate-50 transition">
+                <span>→</span>
+                <span>Continue</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
